@@ -17,7 +17,7 @@ const Hero = () => {
       {/* Image Section */}
       <div className="w-full relative h-32 md:h-48">
         <img
-          className="w-full h-full object-cover"
+          className="w-full h-full rounded-lg select-none object-cover"
           src="./src/assets/vid.gif" // Ensure the correct path
           alt="Animated GIF"
         />
@@ -25,7 +25,7 @@ const Hero = () => {
           <div className="flex justify-between w-full items-end">
             <div className="flex items-center">
               <img
-                className="w-24 h-24 md:w-32 md:h-32 border-red-500 border-4 p-1 md:p-3 bg-white rounded-full object-cover"
+                className="w-24  h-24 md:w-32 md:h-32 border-red-500 border-4 p-1 md:p-3 bg-white rounded-full object-cover"
                 src="./src/assets/logo.png"
                 alt="logo"
               />
@@ -40,7 +40,7 @@ const Hero = () => {
       </div>
 
       {/* Profile Information Section */}
-      <div className="mt-20 flex flex-wrap gap-3 items-center">
+      <div className="mt-20 flex flex-wrap gap-2 items-center">
         <div>
           <p className="text-lg md:text-2xl font-outfit text-zinc-800 font-semibold tracking-tighter">
             Aditya Kumar
@@ -50,7 +50,7 @@ const Hero = () => {
           </p>
         </div>
         <div>
-          <FaCheckCircle color="blue" className="text-sm md:text-base" />
+          <FaCheckCircle color="#27272a" className="text-sm mb-3 md:text-base" />
         </div>
       </div>
 
