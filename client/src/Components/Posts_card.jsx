@@ -23,7 +23,7 @@ export const Posts_card = ({heading, subheading, hashtag, src}) => {
     <div className='w-full '>
         <div>
         <div>
-          <div className="flex mt-5 justify-between items-center">
+          <div className="flex mt-5  justify-between items-center">
             <div className="flex gap-2 items-end">
               <h1 className="text-2xl tracking-tighter font-semibold text-zinc-900 font-outfit">
                 Aditya Kumar

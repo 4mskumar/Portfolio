@@ -9,6 +9,7 @@ const Card = () => {
   return (
     <div className='px-[40rem] w-full min-h-screen bg-zinc-100'>
           <Routes>
+            <Route path='/' element={<Posts />} />
             <Route path='/posts' element={<Posts />} />
             <Route path='/about' element={<About />} />
             <Route path='/slambook' element={<Slambook />} />

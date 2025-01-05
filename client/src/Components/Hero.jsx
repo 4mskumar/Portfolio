@@ -1,11 +1,36 @@
+import gsap from "gsap";
+import { useEffect } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { IoSchoolOutline } from "react-icons/io5";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { SlCalender } from "react-icons/sl";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
+
+  useEffect(() => {
+    gsap.fromTo("#nav_logo", {
+      y: 3,
+      x:-3,
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: 'power2.inOut'
+    }, {
+      y: -3,
+      x: 3,
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: 'power2.inOut'
+    })
+  }, [])
+
   return (
-    <div className="px-4 md:px-16 lg:px-32 xl:px-40 2xl:px-[40rem]">
+    <div className="px-4 md:px-16 relative lg:px-32 xl:px-40 2xl:px-[40rem]">
+      <Link to="/" >
+        <img id="nav_logo" src="./src/assets/logo.png" alt="logo" className="w-[4rem] left-2 hover:bg-zinc-300  rounded-lg py-2 cursor-pointer mt-2  absolute  object-cover" />
+      </Link>
       {/* Header Section */}
       <div className="py-2 w-full flex flex-col">
         <p className="font-outfit text-xl md:text-2xl text-zinc-800 font-semibold">
@@ -21,19 +46,19 @@ const Hero = () => {
           src="./src/assets/vid.gif" // Ensure the correct path
           alt="Animated GIF"
         />
-        <div className="absolute flex justify-between w-full -bottom-16 px-2">
+        <div className="absolute flex z-10 justify-between w-full -bottom-16 px-2">
           <div className="flex justify-between w-full items-end">
             <div className="flex items-center">
               <img
-                className="w-24  h-24 md:w-32 md:h-32 border-red-500 border-4 p-1 md:p-3 bg-white rounded-full object-cover"
-                src="./src/assets/logo.png"
+                className="w-48  h-48 md:w-36 md:h-36 border-white border-4 bg-white rounded-full object-cover"
+                src="./src/assets/aditya.jpg"
                 alt="logo"
               />
             </div>
             <div>
-              <button className="px-3 py-1 md:px-4 md:py-2 bg-blue-500 text-white rounded-lg">
+              <a href="https://x.com/adies__s" target="blank" className="px-3 py-1 z-10 md:px-4 md:py-2 font-outfit bg-blue-500 text-white rounded-lg">
                 Follow
-              </button>
+              </a>
             </div>
           </div>
         </div>

@@ -6,6 +6,22 @@
     padding-right: 30rem;
 }
 
+.shadowB{
+  box-shadow: 3px 4px 0px #000;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0; /* Prevent double scrolling */
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
