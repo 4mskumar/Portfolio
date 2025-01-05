@@ -4,6 +4,7 @@ import { FaChevronDown } from "react-icons/fa";
 
 export const Slambook = () => {
   const [openForm, setOpenForm] = useState(false);
+  const [Todos, setTodos] = useState([])
 
   return (
     <div>
@@ -74,19 +75,27 @@ export const Slambook = () => {
         </div>
       </div>
       <div className="mt-5">
-        <Comment
+        {Todos.length === 0 ? <p className="text-2xl font-outfit text-zinc-800 font-semibold">No comments yet</p> 
+        : 
+        (
+          <div>
+
+          <Comment
           username={"username"}
-          head={
-            "It's a pretty awesome portfolio. I loved the work. Interactions are also lovely ❤❤"
+        head={
+          "It's a pretty awesome portfolio. I loved the work. Interactions are also lovely ❤❤"
           }
         />
         <Comment username={"aditya"} head={"Very good"} />
         <Comment
-          username={"username"}
-          head={
-            "It's a pretty awesome portfolio. I loved the work. Interactions are also lovely ❤❤"
-          }
+        username={"username"}
+        head={
+          "It's a pretty awesome portfolio. I loved the work. Interactions are also lovely ❤❤"
+        }
         />
+        </div>
+      ) 
+        }
       </div>
     </div>
   );

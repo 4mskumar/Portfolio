@@ -1,4 +1,9 @@
-import { Posts_card } from "../Components/Posts_card";
+import { FaGithub } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
+import { TbBrandLeetcode } from "react-icons/tb";
+import { FaInstagram } from "react-icons/fa6";
+import { FaBook } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const Contact = () => {
   // const [Shadow, setShadow] = useState(second)
@@ -99,25 +104,42 @@ export const Contact = () => {
         </form>
       </div>
       <div className="flex justify-center items-center mt-10">
-          <input
-            type="email"
-            className="bg-zinc-800 text-lg outline-none placeholder:font-outfit pl-6 text-white text:font-outfit border-zinc-300 py-3 w-[25rem] rounded-l-full"
-            placeholder="enter your email"
-            name=""
-            id=""
-          />
-          <button
-            onClick={() => {}}
-            className="cursor-pointer font-outfit font-semibld text-lg px-4 py-3 rounded-r-full bg-zinc-500 text-white"
-          >
-            subscribe
-          </button>
-        </div>
-        <div className="flex justify-center items-center mt-3">
-          <p className="mt-2 text-zinc-600 font-outfit text-lg">
-            No spam, just good old quality content. Unsubscribe anytime.
-          </p>
-        </div>
+        <input
+          type="email"
+          className="bg-zinc-800 text-lg outline-none placeholder:font-outfit pl-6 text-white text:font-outfit border-zinc-300 py-3 w-[25rem] rounded-l-full"
+          placeholder="enter your email"
+          name=""
+          id=""
+        />
+        <button
+          onClick={() => {}}
+          className="cursor-pointer font-outfit font-semibld text-lg px-4 py-3 rounded-r-full bg-zinc-500 text-white"
+        >
+          subscribe
+        </button>
+      </div>
+      <div className="flex pb-10 justify-center items-center mt-3">
+        <p className="mt-2 text-zinc-600 font-outfit text-lg">
+          No spam, just good old quality content. Unsubscribe anytime.
+        </p>
+      </div>
+      <div className="border-t-[1px] flex border-zinc-300 justify-between px-10 py-5">
+        <a href="https://github.com/4mskumar" target="blank">
+          <FaGithub className="w-7 h-7 cursor-pointer" color="#71717A" />
+        </a>
+        <a href="https://x.com/adies__s" target="blank">
+          <FaXTwitter className="w-7 h-7 cursor-pointer" color="#71717A" />
+        </a>
+        <a href="https://leetcode.com/u/adies/" target="blank">
+          <TbBrandLeetcode className="w-7 h-7 cursor-pointer" color="#71717A" />
+        </a>
+        <a href="nstagram.com" target="blank">
+          <FaInstagram className="w-7 h-7 cursor-pointer" color="#71717A" />
+        </a>
+        <Link to="/slambook">
+          <FaBook className="w-7 h-7 cursor-pointer" color="#71717A" />
+        </Link>
+      </div>
     </div>
   );
 };
